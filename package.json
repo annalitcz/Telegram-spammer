@@ -1,14 +1,15 @@
 {
   "name": "src",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "botSpam.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node botSpam.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "OzeN",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.6.7",

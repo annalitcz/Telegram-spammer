@@ -41,5 +41,5 @@ async function sendMsg(chatId, message) {
 ```
 4. **Jalankan Program** 
 ```bash
-node botSpam.js
+npm start
 ```
