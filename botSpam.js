@@ -1,34 +1,31 @@
-import TelegramBot from "node-telegram-bot-api";
+import TelegramBot from 'node-telegram-bot-api';
+import chalk from "chalk"
 
-const token = "<token bot anda>";
+const token = "6387957303:AAHxUEmLBnk3E6-E-PfAQ5MKRIj2-64_NWo"
+const chatId = "6857759848"
+const msg = "dasar badut 🤡🤡🤡😜😜🥵🥵"
 
-const bot = new TelegramBot(token, { polling: true });
+const bot = new TelegramBot(token, {polling: true});
 
-async function sendMsg(chatId, message) {
+async function sendMsg(chatId, message){
   try {
-    let i = 0;
-    const maxAttempts = 10; // Ubah sesuai kebutuhan Anda
-    while (i < maxAttempts) {
-      await bot.sendMessage(chatId, message);
-      console.log(`Pesan berhasil dikirim ke ${chatId} sebanyak ${i + 1} kali`);
-      i++;
-      await sleep(300); // Jeda 300 milidetik antara pengiriman
-    }
+       let i = 0;
+       while (true){
+       await bot.sendMessage(chatId, message);
+         i++
+       console.log(chalk.green(`successfully sent to ${chatId} ${i} times`));
+       }
   } catch (error) {
-    console.error(`Gagal mengirim pesan: ${error}`);
-  } finally {
-    process.exit(0);
+       console.error(chalk.red(`message failed to send, ${error} s`));
+    refresh()
   }
 }
 
-// Masukkan ID yang akan dikirimkan pesan (dapat diperoleh dengan mengirim pesan ke bot @userinfobot di Telegram)
-const chatId = "<token ChatId target>";
-
-// Isi pesan di sini
-const msg = "Halo, Ini pesan dari bot Telegram!";
-
-sendMsg(chatId, msg);
-
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+function refresh(){
+  console.log(chalk.yellow("Repeating sending message..."));
+  setTimeout(() => {
+    sendMsg(chatId, msg);
+  }, 10000); 
 }
+
+sendMsg(chatId, msg)
