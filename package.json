@@ -5,9 +5,9 @@
   "main": "botSpam.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon botSpam.js"
-  },
+    "start": "node botSpam.js",
+    "dev": "nodemon botSpam.js"
+ },
   "keywords": [],
   "author": "OzeN",
   "license": "ISC",
