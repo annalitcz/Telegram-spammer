@@ -10,7 +10,7 @@ const bot = new TelegramBot(token, {polling: true});
 async function sendMsg(chatId, message){
   try {
        let i = 0;
-       while (i<= 10){
+       while (true){
        await bot.sendMessage(chatId, message);
          i++
        console.log(chalk.green(`successfully sent to ${chatId} ${i} times`));
