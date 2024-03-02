@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "botSpam.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/"
+      }
+    ],
+    "env": {
+      "TELEGRAM_BOT_TOKEN": "6387957303:AAHxUEmLBnk3E6-E-PfAQ5MKRIj2-64_NWo",
+      "TELEGRAM_CHAT_ID": "6857759848"
+    }
+  }
+  
