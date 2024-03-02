@@ -1,8 +1,8 @@
 import TelegramBot from 'node-telegram-bot-api';
 import chalk from "chalk"
 
-const token = "6744613512:AAHCfqB-7vNmzIre8UR-RCFOdiPzpEXo1kA"
-const chatId = "1261786452"
+const token = "6387957303:AAHxUEmLBnk3E6-E-PfAQ5MKRIj2-64_NWo"
+const chatId = "6857759848"
 const msg = "dasar badut 🤡🤡🤡😜😜🥵🥵"
 
 const bot = new TelegramBot(token, {polling: true});
